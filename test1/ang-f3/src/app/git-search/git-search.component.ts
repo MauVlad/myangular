@@ -14,6 +14,7 @@ export class GitSearchComponent implements OnInit {
   displayQuery: string;
   title: string;
   constructor(private UnifiedSearchService: UnifiedSearchService, private route: ActivatedRoute, private router: Router ) { }
+
   model = new AdvancedSearchModel('', '', '', null, null, '');
   modelKeys = Object.keys(this.model);
 
@@ -58,6 +59,7 @@ export class GitSearchComponent implements OnInit {
         this.searchQuery = search + params;
     }
     this.displayQuery = this.searchQuery;
+    this.router.navigate(['/search/' + this.searchQuery]);
     this.gitSearch();
   }
 

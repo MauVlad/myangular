@@ -1,12 +1,18 @@
 <h3>{{title}} - {{displayQuery}}</h3>
-<form #myForm="ngForm" (ngSubmit)="sendQuery()">
-<div *ngFor="let key of modelKeys">
-  {{key}}
-  <input name="{{key}}" placeholder="Enter {{key}} Here" [(ngModel)]="model[key]" required *ngIf="key === 'q'" appNoSpecialChars />
-  <input name="{{key}}" placeholder="Enter {{key}} Here" [(ngModel)]="model[key]" minlength='2' maxlength='4' *ngIf="key === 'stars'" appNoSpecialChars />
-  <input name="{{key}}" placeholder="Enter {{key}} Here" [(ngModel)]="model[key]" *ngIf="key !== 'q' && key !== 'stars'" appNoSpecialChars />
-</div>
-<button type="submit" [disabled]="!myForm.valid">Submit</button>
+<form #myForm="ngForm" (ngSubmit)="sendQuery(myForm)">
+  <div *ngFor="let key of modelKeys">
+      {{key}}
+      <input name="{{key}}"  placeholder="Enter {{key}} Here" [(ngModel)]="model[key]" required *ngIf="key === 'q'" appNoSpecialChars type='text' />
+      <input name="{{key}}" placeholder="Enter {{key}} Here" [(ngModel)]="model[key]" minlength='2' maxlength='4' *ngIf="key === 'stars'" appNoSpecialChars type='number' />
+      <input name="{{key}}" placeholder="Enter {{key}} Here" [(ngModel)]="model[key]" *ngIf="key !== 'q' && key !== 'stars'" type="{{checkType(model[key])}}" appNoSpecialChars />
+      <div *ngIf="myForm.controls[key] && myForm.controls[key].invalid">{{key}} is invalid.</div>
+  </div> 
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+  <div>
+    <a routerLink="/" routerLinkActive="active">
+      <button>Home</button>
+    </a>
+  </div>
 </form>
 <div *ngIf="searchResults; else elseBlock">
   <h3 class="total">Total Results: {{searchResults.total_count}}</h3>

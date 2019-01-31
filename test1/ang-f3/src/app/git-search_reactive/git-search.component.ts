@@ -19,28 +19,29 @@ export class GitSearchComponent implements OnInit {
   formControls = {};
   constructor(private GitSearchService: GitSearchService, private route: ActivatedRoute, private router: Router ) {
     this.modelKeys.forEach( (key) => {
-        let validators = [];
-        if (key === 'q') {
-            validators.push(Validators.required);
-        }
-        if (key === 'stars') {
-            validators.push(Validators.maxLength(4));
-        }
-        validators.push(this.noSpecialChars);
-        this.formControls[key] = new FormControl(this.model[key], validators);
-    })
+      let validators = [];
+      if (key === 'q') {
+          validators.push(Validators.required);
+      }
+      if (key === 'stars') {
+          validators.push(Validators.maxLength(4));
+      }
+      validators.push(this.noSpecialChars);
+      this.formControls[key] = new FormControl(this.model[key], validators);
+  })
     this.form = new FormGroup(this.formControls);
-  }
-  model = new AdvancedSearchModel('', '', '', null, null, '');
+   }
+
+  model = new AdvancedSearchModel('', '', '', Number(null), Number(null), '');
   modelKeys = Object.keys(this.model);
 
   noSpecialChars(c: FormControl) {
     let REGEXP = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
-
+  
     return REGEXP.test(c.value) ? {
-        validateEmail: {
+      validateEmail: {
         valid: false
-        }
+      }
     } : null;
   }
 
@@ -63,6 +64,10 @@ export class GitSearchComponent implements OnInit {
     })
   }
 
+  checkType = (key) => {
+    return typeof key === 'string' ? 'text' : typeof key;
+  }
+  
   sendQuery = () => {
     this.searchResults = null;
     let search : string = this.form.value['q'];

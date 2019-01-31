@@ -6,7 +6,10 @@ import 'rxjs/add/operator/publishReplay';
 
 @Injectable()
 export class GitCodeSearchService {
-
+  cachedValue: string;    
+  search: Observable<GitCodeSearch>;
+  constructor(private http: HttpClient) {
+  }    
   codeSearch : Function = (query: string) : Observable<GitCodeSearch> => {
     if (query.indexOf('user') <= -1) {
       query = query + '+user:angular';
@@ -23,10 +26,4 @@ export class GitCodeSearchService {
     }
     return this.search;
   }
-  cachedValue: string;    
-  search: Observable<GitCodeSearch>;
-  constructor(private http: HttpClient) {
-
-  }
-
 }
