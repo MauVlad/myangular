@@ -5,7 +5,12 @@
 body {
     background: #2E9CE6;
     padding: 3em;
-    font-family: 'Raleway', 'Arial';
+    font-family: "Tahoma", "Geneva", sans-serif;
+    font-size: 22px;
+    font-size-adjust: 2.5;
+    font-weight: 500;
+    font-style: oblique;
+    font-variant: normal;
     color: #fff;
 }
 ul {
