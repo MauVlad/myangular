@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: black;
+    color: blue;
+}
+h1{
+    background-color: white;
+    color: rgb(255, 8, 8);
+}
+h2{
+    background-color: #3e0202;
+    color: violet;
+}
+img{
+    background-color: #f309098c;
+}
+p{
+    background-color: green;
+    color: blueviolet;
+}
+mark{
+    background-color: red;
+    color: blue;
+}
