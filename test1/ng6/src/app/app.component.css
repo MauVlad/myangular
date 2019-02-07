@@ -4,3 +4,54 @@ h1{
 h2{
     color: rgb(51,204,204);
 }
+.button {
+    background-color:transparent;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: rgb(115, 128, 115);
+    color: black;
+  }
+  a:link, a:visited { 
+  color: purple;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:link:active, a:visited:hover { 
+  color: blue;
+}
+select{
+    background-color: #41728A;
+    color: rgb(3, 32, 46);
+}
+select:hover{
+    background-color: rgb(250, 68, 12);
+    color: rgb(3, 32, 46);
+}
+
+thead {color:green;}
+thead:hover {color:black;}
+tbody {color:blue;}
+tbody:hover {color:yellow;}
+tfoot {color:red;}
+tfoot:hover {color:pink;}
+
+table, th, td {
+  border: 3px solid yellow;
+}
+table:hover{
+  border: 3px solid white;
+}
+th:hover{
+  border: 3px solid red;
+}
+td:hover{
+    border: 3px solid purple;
+}
