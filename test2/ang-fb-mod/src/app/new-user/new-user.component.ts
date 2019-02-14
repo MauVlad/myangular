@@ -13,7 +13,7 @@ import { FirebaseService } from '../services/firebase.service';
 export class NewUserComponent implements OnInit {
 
   exampleForm: FormGroup;
-  avatarLink: string = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
+  avatarLink: string = "https://areajugones.sport.es/wp-content/uploads/2018/12/vegetto-1024x576.jpg";
 
   validation_messages = {
    'name': [
@@ -60,7 +60,7 @@ export class NewUserComponent implements OnInit {
   }
 
   resetFields(){
-    this.avatarLink = "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg";
+    this.avatarLink = "https://areajugones.sport.es/wp-content/uploads/2018/12/vegetto-1024x576.jpg";
     this.exampleForm = this.fb.group({
       name: new FormControl('', Validators.required),
       surname: new FormControl('', Validators.required),

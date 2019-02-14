@@ -20,15 +20,6 @@ import { FirebaseService } from './services/firebase.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatInputModule, MatSliderModule, MatDialogModule } from '@angular/material';
 
-var config = {
-  apiKey: "AIzaSyBkXfMTa0_fnPlNA3Tl10N5_CTHqQSoouo",
-  authDomain: "ang-fb-cbf2c.firebaseapp.com",
-  databaseURL: "https://ang-fb-cbf2c.firebaseio.com",
-  projectId: "ang-fb-cbf2c",
-  storageBucket: "ang-fb-cbf2c.appspot.com",
-  messagingSenderId: "1025501819247"
-};
-
 @NgModule({
   declarations: [
     AppComponent,
