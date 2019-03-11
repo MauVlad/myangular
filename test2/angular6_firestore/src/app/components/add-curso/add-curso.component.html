@@ -23,7 +23,7 @@
         </div>
         <div class="input-field col s6">
           <input [(ngModel)]="curso.formador" #formador="ngModel" type="text" name="formador" id="formador" placeholder="Formador curso"
-            minlength="3" maxlength="20" required>
+            minlength="18" maxlength="18" required>
           <label>Formador</label>
           <div *ngIf="formador.touched && !formador.valid">
             <div *ngIf="formador.errors.required">Formador es requerido</div>
