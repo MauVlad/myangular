@@ -1,0 +1,140 @@
+
+
+<div fxLayout="row" fxLayout="row wrap">
+		
+
+
+  <div fxFlex="100" fxLayout="column" fxLayoutAlign="space-between stretch" class="contact-list-container">
+    
+
+        <div class="contact-list">
+          <div fxLayout="row"  fxLayoutAlign="space-around none" class="mat-ripple"  >
+    
+    
+    
+            <div fxFlex="60">
+              <h5 class="mat-subheading-1" > <b> Shopping Cart </b> </h5>
+                
+                 
+            </div>
+    
+            <div fxFlex="20">
+                
+    
+                <p class="mat-body-1" >
+                  Precio 
+                </p>
+     
+                       
+            </div>
+            
+            <div fxFlex="20">
+                
+              <p class="mat-body-1" >
+                Cantidad 
+              </p>
+            </div>
+    
+                
+    
+            
+          
+                
+       
+       
+       
+          
+          
+          </div>
+    
+          <mat-divider></mat-divider>
+
+          <div fxLayout="row" *ngFor="let employee of employees" fxLayoutAlign="space-around none" class="mat-ripple"  >
+    
+    
+    
+        <div fxFlex="15">
+          <img class="avatar" src="{{employee?.image}}">
+        </div>
+
+        <div fxFlex="50">
+          <!--
+          <h3 class="mat-subheading-1" > <b> {{employee?.name}} </b> </h3>
+        -->
+          <p class="mat-body-1" >
+              By {{employee?.name}} 
+            </p>
+
+        </div>
+
+        <div fxFlex="25">
+            
+
+            <p class="mat-body-1" >
+               <b>{{employee?.price}}</b>
+              </p>
+ 
+                   
+        </div>
+        
+        <div fxFlex="10">
+            
+            <mat-form-field style="width:20px !important">
+                <input type="number" id="cantidad" 
+                  class="input" placeholder="Cant"
+                  value="1"
+                formControlName="cantidad" required matInput>
+
+            </mat-form-field>
+            
+            
+
+        
+        </div>
+
+            
+
+        
+      
+            
+   
+   
+   
+      
+      
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div fxLayout="row"  fxLayoutAlign="space-around none" class="mat-ripple"  >
+    
+    
+    
+        <div fxFlex="70">
+           
+             
+        </div>
+
+        <div fxFlex="30">
+            
+
+          <h3 class="mat-subheading-1" > <b> 
+              Total items(3): $4,500.00 
+          </b> </h3>
+ 
+                   
+        </div>
+         
+   
+   
+      
+      
+      </div>
+
+
+  
+    </div>
+
+
+
+</div>

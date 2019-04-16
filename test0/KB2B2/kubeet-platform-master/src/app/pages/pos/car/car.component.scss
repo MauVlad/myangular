@@ -1,0 +1,47 @@
+.full {
+	width: 100%;
+}
+.contact-list-container {
+	background-color: white;
+	padding: 5px;
+
+	.contact-list {
+		height: 100%;
+		overflow: auto;
+		div {
+			margin: 0;
+		}
+		h3 {
+			margin: 0;
+		}
+		p {
+			margin: 0;
+		}
+		.avatar {
+			width: 30px;
+			height: 30px;
+			border-radius: 5%;
+		}
+	}
+	
+	.contact-list-header {
+		background-color: #eee;
+		padding: 5px;
+		div {
+			margin: auto;
+		}
+		
+	}
+}
+.contact-add {
+		padding: 10px;
+		background: white;
+		.avatar {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+		}
+		h3 {
+			margin: auto;
+		}
+	}

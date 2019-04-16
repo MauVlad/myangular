@@ -1,0 +1,155 @@
+<div class="row">
+<!--
+  <ul class="nav flex-column">
+      <li class="nav-item">
+      -->    
+        <a class="nav-link" routerLink="/auth/pages/products/newproduct">
+            <ion-icon name="add"></ion-icon>
+          </a>
+  
+  <!--      </li>
+  </ul>
+-->  
+  <div class="col-md-4 offset-md-1">
+    <div class="input-group">
+      
+      <input type="text" class="form-control"  [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" placeholder="Search by name..." (keyup)="searchByName()">
+      <div class="input-group-append">
+        
+        <span class="input-group-text">
+         <ion-icon class="icon" name="search"></ion-icon> 
+        </span>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 filter-by-age">
+    <div class="row">
+      <div class="col-md-auto title">
+        <span>Filter by age (older than):</span>
+      </div>
+      <div class="col">
+        <span>0 </span>
+        <mat-slider
+          class="age-slider"
+          max="100"
+          min="0"
+          step="1"
+          thumbLabel="true"
+          (ngModel)="ageValue"
+          (change)="rangeChange($event)">
+        </mat-slider> 
+        <span> 100</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="list-group users-list">
+  <div *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+  
+  <div class="row">
+      <div class="col col-md-2 image-col">
+        <img class="image" [src]="item.payload.doc.data().avatar">
+      </div>
+      <div class="col col-md-8 text-col">
+        <h5 class="mb-1">{{item.payload.doc.data().name}} {{item.payload.doc.data().surname}}</h5>
+        <small>Age: {{item.payload.doc.data().age}}</small>
+      </div>
+      <div class="col col-md-2 actions-col">
+        <button class="btn btn-outline-primary action" (click)="viewDetails(item)" type="button">
+          <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
+         
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<div fxLayout="row" fxLayout="row wrap">
+		
+
+
+    <div fxFlex="100" fxLayout="column" fxLayoutAlign="space-between stretch" class="contact-list-container">
+      
+  
+          <div class="contact-list">
+      
+            <div fxLayout="row" *ngFor="let item of items" fxLayoutAlign="space-around none" class="mat-ripple"  >
+      
+      
+      
+          <div fxFlex="20">
+            <img class="avatar" [src]="item.payload.doc.data().avatar">
+          </div>
+
+          <div fxFlex="40">
+            <!--
+            <h3 class="mat-subheading-1" > <b> {{employee?.name}} </b> </h3>
+            -->
+            <p class="mat-body-1" >
+                {{item.payload.doc.data().name}} {{item.payload.doc.data().surname}}
+              </p>
+
+            <!--
+               <p class="mat-body-1" >
+                  By {{employee?.provider}} 
+              </p>
+
+              <p class="mat-body-1" >
+                Precio : $<b> {{employee?.price}} </b> - Stock ( {{employee?.exists}} )
+                </p>
+              -->
+              <!--
+              <mat-form-field style="width:40px !important">
+                  <input type="number" id="cantidad" 
+                    class="input" placeholder="Cant"
+                    value="1"
+                  formControlName="cantidad" required matInput>
+
+              </mat-form-field>
+              
+              
+            
+                     <button mat-icon-button>
+                     <mat-icon>add_shopping_cart</mat-icon>
+                    </button>
+                    <a matLine >Comprar</a>
+                  -->
+
+          
+          </div>
+
+          <div fxFlex="20">
+              
+              <p class="mat-body-1" >
+                  Age: {{item.payload.doc.data().age}}
+              </p>
+  
+                 
+            </div>
+         
+            <div fxFlex="20">
+                <button class="btn btn-outline-primary action" (click)="viewDetails(item)" type="button">
+                    <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
+                   
+                  </button>
+                
+              </div>
+    
+              
+
+          
+        
+              
+      </div>
+
+
+    
+      </div>
+
+
+
+</div>
