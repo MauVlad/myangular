@@ -1,0 +1,115 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="deduperce-image">
+        <div class="view hm-zoom z-depth-2" style="cursor: pointer">
+          <img [src]="deduperce.deduperceAvatar" [alt]="deduperce.deduperceName" width="100%" class="img-fluid rounded">
+        </div>
+        <div class="" style="margin-top:15px">
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Salary Base Contribution</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">${{deduperce.deduperceSALBC}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Daily Salary Integrated</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">${{deduperce.deduperceSALDI}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Periodicity of Payment</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">{{deduperce.dedupercePEDP}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Bank</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">{{deduperce.deduperceBanco}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Bank key</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">{{deduperce.deduperceClave}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="deduperce-detail">
+        <h5 class="deduperce-head">Deduperce Details</h5>
+        <table class="table" cellspacing="0" style="max-height: 28px">
+          <tbody>
+            <tr>
+              <th scope="row"><b>Name</b></th>
+              <td>{{deduperce.deduperceName}}</td>
+            
+              <th scope="row"><b>Surname</b></th>
+              <td>{{deduperce.deduperceSurname}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>RFC</b></th>
+              <td>{{deduperce.deduperceRFC}}</td>
+            
+              <th scope="row"><b>CURP</b></th>
+              <td>{{deduperce.deduperceCURP}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Social Security Number</b></th>
+              <td>{{deduperce.deduperceNSS}}</td>
+            
+              <th scope="row"><b>Email</b></th>
+              <td>{{deduperce.deduperceCorreo}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Department</b></th>
+              <td>{{deduperce.deduperceDPT}}</td>
+            
+              <th scope="row"><b>Employment</b></th>
+              <td>{{deduperce.dedupercePuesto}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Worker Number</b></th>
+              <td>{{deduperce.deduperceNDT}}</td>
+            
+              <th scope="row"><b>Recruitment Regime</b></th>
+              <td>{{deduperce.deduperceRDC}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Type of Contract</b></th>
+              <td>{{deduperce.deduperceTDC}}</td>
+            
+              <th scope="row"><b>Job Risk</b></th>
+              <td>{{deduperce.deduperceRDP}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Type of Day</b></th>
+              <td>{{deduperce.deduperceTDJ}}</td>
+            
+              <th scope="row"><b>Initial Date of Employment Relationship</b></th>
+              <td>{{deduperce.deduperceFIRT}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Antiquity</b></th>
+              <td>{{deduperce.deduperceATGD}}</td>
+            
+              <th scope="row"><b>Origin of The Resource</b></th>
+              <td>{{deduperce.deduperceORDR}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Deduperce Added on</b></th>
+              <td>{{deduperce.deduperceAdded * 1000 | date}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,235 @@
+<br>
+<div class="container">
+  <div class="row">
+       <div class="col-sm-12">
+      <div class="deduperce-detail">
+          <form class="needs-validation" #deduperceForm="ngForm" (ngSubmit)="createDeduperce(deduperceForm)">
+            
+            <div class="mb-3">
+              <label for="deduperceAvatar">Deduperce Image</label>
+              <input type="text" class="form-control" id="deduperceAvatar" [(ngModel)]="deduperce.deduperceAvatar" name="deduperceAvatar"
+                placeholder="Image Url" required>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="deduperceName">Name</label>
+                  <input type="text" class="form-control" id="deduperceName" name="deduperceName" [(ngModel)]="deduperce.deduperceName" placeholder="Deduperce Name"
+                    value="" required>
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="deduperceSurname">Surname</label>
+                    <input type="text" class="form-control" id="deduperceSurname" name="deduperceSurname" [(ngModel)]="deduperce.deduperceSurname" placeholder="Deduperce Surname"
+                      value="" required>
+                    <div class="invalid-feedback">
+                      Valid last name is required.
+                    </div>
+                </div>
+              </div>
+    
+              <div class="row">
+              <div class="col-md-6 mb-3">
+                  <label for="deduperceRFC">RFC</label>
+                  <input type="text" class="form-control" id="deduperceRFC" name="deduperceRFC" [(ngModel)]="deduperce.deduperceRFC" placeholder="Deduperce RFC"
+                    value="" required minlength="13" maxlength="13">
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                  <label for="deduperceCURP">CURP</label>
+                  <input type="text" class="form-control" id="deduperceCURP" name="deduperceCURP" [(ngModel)]="deduperce.deduperceCURP" placeholder="Deduperce CURP"
+                    value="" required minlength="21" maxlength="21">
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+              </div>
+              </div>
+    
+            <div class="row">
+                  <div class="col-md-6 mb-3">
+                      <label for="deduperceNSS">Social Security Number</label>
+                      <input type="text" class="form-control" id="deduperceNSS" name="deduperceNSS" [(ngModel)]="deduperce.deduperceNSS" placeholder="Deduperce NSS"
+                        value="" required minlength="11" maxlength="11">
+                      <div class="invalid-feedback">
+                        Valid last name is required.
+                      </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="deduperceCorreo">Email</label>
+                      <input type="text" class="form-control" id="deduperceCorreo" name="deduperceCorreo" [(ngModel)]="deduperce.deduperceCorreo" placeholder="Deduperce Email"
+                        value="" required>
+                      <div class="invalid-feedback">
+                        Valid last name is required.
+                      </div>
+                  </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="deduperceDPT">Department</label>
+                  <input type="text" class="form-control" id="deduperceDPT" name="deduperceDPT" [(ngModel)]="deduperce.deduperceDPT" placeholder="Deduperce Department"
+                    value="" required>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="dedupercePuesto">Employment</label>
+                <input type="text" class="form-control" id="dedupercePuesto" name="dedupercePuesto" [(ngModel)]="deduperce.dedupercePuesto" placeholder="Deduperce Employment"
+                  value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="deduperceNDT">Worker Number</label>
+                <input type="text" class="form-control" id="deduperceNDT" name="deduperceNDT" [(ngModel)]="deduperce.deduperceNDT" placeholder="Deduperce Worker Number"
+                  value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="deduperceRDC">Recruitment Regime</label>
+                  <select [(ngModel)]="deduperceRDC" name="deduperceRDC" id="deduperceRDC" class="form-control" [value]="0"> 
+                    <option value="0">Deduperce Recruitment Regime</option> 
+                    <option [ngValue]="k.id" *ngFor="let k of userRols">{{k.rol}}</option>  
+                  </select>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="deduperceTDC">Type of Contract</label>
+                <select [(ngModel)]="deduperceTDC" name="deduperceTDC" id="deduperceTDC" class="form-control" [value]="0"> 
+                    <option value="0">Deduperce Type of Contract</option> 
+                    <option [ngValue]="k.id1" *ngFor="let k of userTips">{{k.tip}}</option>  
+                  </select>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="deduperceRDP">Job Risk</label>
+                <select [(ngModel)]="deduperceRDP" name="deduperceRDP" id="deduperceRDP" class="form-control" [value]="0"> 
+                    <option value="0">Deduperce Job Risk</option> 
+                    <option [ngValue]="k.id2" *ngFor="let k of userRigs">{{k.rig}}</option>  
+                  </select>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+   
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="deduperceTDJ">Type of Day</label>
+                <select [(ngModel)]="deduperceTDJ" name="deduperceTDJ" id="deduperceTDJ" class="form-control" [value]="0"> 
+                    <option value="0">Deduperce Type of Day</option> 
+                    <option [ngValue]="k.id3" *ngFor="let k of userJors">{{k.jor}}</option>  
+                  </select>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="deduperceFIRT">Initial Date of Employment Relationship</label>
+                <input type="text" class="form-control" id="deduperceFIRT" name="deduperceFIRT" [(ngModel)]="deduperce.deduperceFIRT" placeholder="Deduperce Initial Date of Employment Relationship"
+                  value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="deduperceATGD">Antiquity</label>
+                <input type="text" class="form-control" id="deduperceATGD" name="deduperceATGD" [(ngModel)]="deduperce.deduperceATGD" placeholder="Deduperce Antiquity"
+                  value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="deduperceORDR">Origin of The Resource</label>
+                <select [(ngModel)]="deduperceORDR" name="deduperceORDR" id="deduperceORDR" class="form-control" [value]="0"> 
+                    <option value="0">Deduperce Origin of The Resource</option> 
+                    <option [ngValue]="k.id4" *ngFor="let k of userRecs">{{k.rec}}</option>  
+                  </select>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="deduperceSALBC">Salary Base Contribution</label>
+                <input type="text" class="form-control" id="deduperceSALBC" name="deduperceSALBC" [(ngModel)]="deduperce.deduperceSALBC" placeholder="Deduperce Salary Base Contribution"
+                  value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="deduperceSALDI">Daily Salary Integrated</label>
+                <input type="text" class="form-control" id="deduperceSALDI" name="deduperceSALDI" [(ngModel)]="deduperce.deduperceSALDI" placeholder="Deduperce Daily Salary Integrated"
+                  value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="dedupercePEDP">Periodicity of Payment</label>
+                <input type="text" class="form-control" id="dedupercePEDP" name="dedupercePEDP" [(ngModel)]="deduperce.dedupercePEDP" placeholder="Deduperce Periodicity of Payment"
+                  value="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="deduperceBanco">Bank</label>
+                <select [(ngModel)]="deduperceBanco" name="deduperceBanco" id="deduperceBanco" class="form-control" [value]="0"> 
+                    <option value="0">Deduperce Bank</option> 
+                    <option [ngValue]="k.id5" *ngFor="let k of userBcos">{{k.bco}}</option>  
+                  </select>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="deduperceClave">Bank key</label>
+              <input type="text" class="form-control" id="deduperceClave" name="deduperceClave" [(ngModel)]="deduperce.deduperceClave" placeholder="Deduperce Bank key"
+                value="" required minlength="18" maxlength="18">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+            
+            <hr class="mb-4">
+    
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Add Deduperce</button>
+            
+            </form>
+      </div>
+    </div>
+  </div>
+</div>

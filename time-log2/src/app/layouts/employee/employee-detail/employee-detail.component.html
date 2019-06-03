@@ -1,0 +1,115 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="employee-image">
+        <div class="view hm-zoom z-depth-2" style="cursor: pointer">
+          <img [src]="employee.employeeAvatar" [alt]="employee.employeeName" width="100%" class="img-fluid rounded">
+        </div>
+        <div class="" style="margin-top:15px">
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Salary Base Contribution</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">${{employee.employeeSALBC}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Daily Salary Integrated</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">${{employee.employeeSALDI}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Periodicity of Payment</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">{{employee.employeePEDP}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Bank</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">{{employee.employeeBanco}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Bank key</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">{{employee.employeeClave}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="employee-detail">
+        <h5 class="employee-head">Employee Details</h5>
+        <table class="table" cellspacing="0" style="max-height: 28px">
+          <tbody>
+            <tr>
+              <th scope="row"><b>Name</b></th>
+              <td>{{employee.employeeName}}</td>
+            
+              <th scope="row"><b>Surname</b></th>
+              <td>{{employee.employeeSurname}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>RFC</b></th>
+              <td>{{employee.employeeRFC}}</td>
+            
+              <th scope="row"><b>CURP</b></th>
+              <td>{{employee.employeeCURP}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Social Security Number</b></th>
+              <td>{{employee.employeeNSS}}</td>
+            
+              <th scope="row"><b>Email</b></th>
+              <td>{{employee.employeeCorreo}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Department</b></th>
+              <td>{{employee.employeeDPT}}</td>
+            
+              <th scope="row"><b>Employment</b></th>
+              <td>{{employee.employeePuesto}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Worker Number</b></th>
+              <td>{{employee.employeeNDT}}</td>
+            
+              <th scope="row"><b>Recruitment Regime</b></th>
+              <td>{{employee.employeeRDC}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Type of Contract</b></th>
+              <td>{{employee.employeeTDC}}</td>
+            
+              <th scope="row"><b>Job Risk</b></th>
+              <td>{{employee.employeeRDP}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Type of Day</b></th>
+              <td>{{employee.employeeTDJ}}</td>
+            
+              <th scope="row"><b>Initial Date of Employment Relationship</b></th>
+              <td>{{employee.employeeFIRT}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Antiquity</b></th>
+              <td>{{employee.employeeATGD}}</td>
+            
+              <th scope="row"><b>Origin of The Resource</b></th>
+              <td>{{employee.employeeORDR}}</td>
+            </tr>
+            <tr>
+              <th scope="row"><b>Employee Added on</b></th>
+              <td>{{employee.employeeAdded * 1000 | date}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
